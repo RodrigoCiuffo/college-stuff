@@ -2,6 +2,7 @@ html,
 body {
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,11 +21,10 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #ffffff;
-}
+    background: #B3A388;}
 
 ::-webkit-scrollbar-thumb {
-    background-color: #022466;
+    background-color: #3D2B1F;
 }
 
 main {
@@ -34,7 +34,7 @@ main {
 
 .blank {
     width: 20vw;
-    height: 5vh;
+    height: 6vh;
 }
 
 header {
@@ -44,7 +44,7 @@ header {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #022466;
+    background-color: #3D2B1F;
 }
 
 ul {
@@ -69,8 +69,13 @@ li {
 }
 
 li:hover{
-    background: #028;
+    color: #B3A388;
     transition: 0.3s;
+}
+
+li:focus{
+    text-decoration: none;
+    box-decoration-break: none;
 }
 
 .mainSec {
@@ -84,15 +89,22 @@ li:hover{
     align-items: center;
     height: 88vh;
     width: 20vw;
-    background-color: #022466;
+    background-color: #3D2B1F;
     flex-direction: column;
 }
 
+.leftSec p{
+    margin-left: 1.8vw;
+}
+
 .rightSec {
+    color: #3D2B1F
+    ;
     height: 88vh;
     width: 80vw;
     padding-left: 10px;
     overflow: auto;
+    background-color: #B3A388;
 }
 
 footer {
@@ -102,8 +114,7 @@ footer {
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    color: white;
-    background-color: #022466;
+    background-color: #3D2B1F;
 }
 
 h1 {
@@ -112,11 +123,12 @@ h1 {
 }
 
 #profile {
-    width: 28vh;
-    height: 35vh;
+    width: 14vw;
+    height: 30vh;
     margin-top: 5vh;
     margin-bottom: 5vh;
-    border: 1px solid white
+    border: 1px solid #B3A388;
+    border-radius: 100%;
 }
 
 .leftSec p {
@@ -126,7 +138,7 @@ h1 {
 }
 
 .iconDiv {
-    width: 10vw;
+    width: 120px;
     height: 6vh;
     display: flex;
     justify-content: space-between;
@@ -134,14 +146,15 @@ h1 {
 }
 
 .iconDiv img{
-    width: 3.2vw;
+    width: 35px;
     height: 6vh;
-    transition: 0.3s;
+    transition: 0.6s;
+    border-radius: 100%;
 }
 
 .iconDiv img:hover {
-    transition: 0.3s;
-    background-color: #028;
+    transition: 0.6s;
+    background-color: #B3A388;
 }
 
 a {
@@ -155,4 +168,53 @@ a {
 
 .rightSec p {
     text-indent: 1em;
+}
+
+@media screen and (max-width: 1024px){
+
+    .mainSec{
+        flex-direction: column;
+    }
+
+    .leftSec{
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .rightSec{
+        width: 100vw;
+    }
+
+    .blank {
+        width: 0vw;
+        height: 6vh;
+    }
+
+    .iconDiv{
+        padding: 0;
+    }
+
+    #profile {
+        width: 12vw;
+        height: 18vh;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 912px){
+    #profile{
+        width: 22vw;
+        height: 16vh;
+    }
+}
+
+@media screen and (max-width: 512px){
+    #profile{
+        width: 26vw;
+    }
+
+    h1{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
